@@ -1,45 +1,58 @@
-//Day 4
-let weather = 'cloudy'
-switch (weather) {
-  case 'rainy':
-    console.log('You need a rain coat.')
-    break
-  case 'cloudy':
-    console.log('It might be cold, you need a jacket.')
-    break
-  case 'sunny':
-    console.log('Go out freely.')
-    break
-  default:
-    console.log(' No need for rain coat.')
-}
+//day 5
+// This the most recommended way to create an empty list
+const arr = []
+console.log(arr)
 
-// Switch More Examples
-let dayUserInput = prompt('What day is today ?')
-let day = dayUserInput.toLowerCase()
+//this is array with value
+const numbers = [0, 3.14, 9.81, 37, 98.6, 100] // array of numbers
+const fruits = ['banana', 'orange', 'mango', 'lemon'] // array of strings, fruits
+const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array of strings, vegetables
+const animalProducts = ['milk', 'meat', 'butter', 'yoghurt'] // array of strings, products
+const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'MongDB'] // array of web technologies
+const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland'] // array of strings, countries
 
-switch (day) {
-  case 'monday':
-    console.log('Today is Monday')
-    break
-  case 'tuesday':
-    console.log('Today is Tuesday')
-    break
-  case 'wednesday':
-    console.log('Today is Wednesday')
-    break
-  case 'thursday':
-    console.log('Today is Thursday')
-    break
-  case 'friday':
-    console.log('Today is Friday')
-    break
-  case 'saturday':
-    console.log('Today is Saturday')
-    break
-  case 'sunday':
-    console.log('Today is Sunday')
-    break
-  default:
-    console.log('It is not a week day.')
-}
+// Print the array and its length
+
+console.log('Numbers:', numbers)
+console.log('Number of numbers:', numbers.length)
+
+console.log('Fruits:', fruits)
+console.log('Number of fruits:', fruits.length)
+
+console.log('Vegetables:', vegetables)
+console.log('Number of vegetables:', vegetables.length)
+
+console.log('Animal products:', animalProducts)
+console.log('Number of animal products:', animalProducts.length)
+
+console.log('Web technologies:', webTechs)
+console.log('Number of web technologies:', webTechs.length)
+
+console.log('Countries:', countries)
+console.log('Number of countries:', countries.length)
+
+// array with different data type
+const arrr = [
+    'Asabeneh',
+    250,
+    true,
+    { country: 'Finland', city: 'Helsinki' },
+    { skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] }
+] // arr containing different data types
+console.log(arr)
+// creating array with string split
+
+let js = 'JavaScript'
+const charsInJavaScript = js.split('')
+
+console.log(charsInJavaScript) // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+
+let companiesString = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+const companies = companiesString.split(',')
+
+console.log(companies) // ["Facebook", " Google", " Microsoft", " Apple", " IBM", " Oracle", " Amazon"]
+let txt =
+  'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+const words = txt.split(' ')
+
+console.log(words)
