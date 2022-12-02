@@ -1,30 +1,14 @@
 //day 7
 //Functions
-// function without parameter,  a function which make a number square
-function square() {
-    let num = 2
-    let sq = num * num
-    console.log(sq)
+// Function with many arguments
+function sumAllNums() {
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {  // argunments is a keyword of the function which is a array
+      sum += arguments[i]
+    }
+    return sum
   }
   
-  square() // 4
-  
-  // function without parameter
-  function addTwoNumbers() {
-    let numOne = 10
-    let numTwo = 20
-    let sum = numOne + numTwo
-  
-    console.log(sum)
-  }
-  
-  addTwoNumbers() // a function has to be called by its name to be executed 
-  function printFullName (){
-    let firstName = 'Asabeneh'
-    let lastName = 'Yetayeh'
-    let space = ' '
-    let fullName = firstName + space + lastName
-    console.log(fullName)
-}
-
-printFullName()
+  console.log(sumAllNums(1, 2, 3, 4)) // 10
+  console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
+  console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
