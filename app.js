@@ -1,51 +1,30 @@
-//day 6
-//for  of loops 
-const numbers = [1, 2, 3, 4, 5]
-
-for (const num of numbers) {
-  console.log(num)
+//day 7
+//Functions
+// function without parameter,  a function which make a number square
+function square() {
+    let num = 2
+    let sq = num * num
+    console.log(sq)
+  }
+  
+  square() // 4
+  
+  // function without parameter
+  function addTwoNumbers() {
+    let numOne = 10
+    let numTwo = 20
+    let sum = numOne + numTwo
+  
+    console.log(sum)
+  }
+  
+  addTwoNumbers() // a function has to be called by its name to be executed 
+  function printFullName (){
+    let firstName = 'Asabeneh'
+    let lastName = 'Yetayeh'
+    let space = ' '
+    let fullName = firstName + space + lastName
+    console.log(fullName)
 }
 
-// 1 2 3 4 5
-
-for (const num of numbers) {
-  console.log(num * num)
-}
-
-// 1 4 9 16 25
-
-// adding all the numbers in the array
-let sum = 0
-for (const num of numbers) {
-  sum = sum + num  
-	// can be also shorten like this, sum += num
-  // after this we will use the shorter synthax(+=, -=, *=, /= etc)
-}
-console.log(sum) // 15
-
-const webTechs = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Redux',
-  'Node',
-  'MongoDB'
-]
-
-for (const tech of webTechs) {
-  console.log(tech.toUpperCase())
-}
-
-// HTML CSS JAVASCRIPT REACT NODE MONGODB
-
-for (const tech of webTechs) {
-  console.log(tech[0]) // get only the first letter of each element,  H C J R N M
-}
-const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
-const newArr = []
-for(const country of countries){
-  newArr.push(country.toUpperCase())
-}
-
-console.log(newArr)
+printFullName()
