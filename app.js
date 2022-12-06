@@ -1,14 +1,14 @@
 //day 7
 //Functions
-// Function with many arguments
-function sumAllNums() {
-    let sum = 0
-    for (let i = 0; i < arguments.length; i++) {  // argunments is a keyword of the function which is a array
-      sum += arguments[i]
-    }
-    return sum
+// Unlimited number of parameters in ARROW function
+//arraw function declaration
+const sumAllNums = (... args) =>{
+  let sum = 0
+  for(const element of args){
+    sum += element
   }
-  
-  console.log(sumAllNums(1, 2, 3, 4)) // 10
-  console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
-  console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
+  return sum
+}
+console.log(sumAllNums(1, 2, 3, 4));
+console.log(sumAllNums(10, 20, 13, 40, 10));
+console.log(sumAllNums(15,25,30,25,10,33,40));
