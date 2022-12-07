@@ -1,30 +1,20 @@
 //day 7
 //Functions
-// Anonymous Function
-//Anonymous function or without name
-const anonymousFun = function() {
-  console.log(
-    'I am an anonymous function and my value is stored in anonymousFun'
-  )
-}
-console.log(anonymousFun);
-
-//Expression Function
-// Expression functions are anonymous functions. After we create a function without a name and we assign it to a variable. To return a value from the function we should call the variable. Look at the example below.
-
-// Function expression
-const square = function(n) {
+// Arrow function is an alternative to write a function, however function declaration and arrow function have some minor differences.
+// Arrow function uses arrow instead of the keyword function to declare a function. Let us see both function declaration and arrow function.
+// This is how we write normal or declaration function
+// Let us change this declaration function to an arrow function
+function square(n) {
   return n * n
 }
 
-console.log(square(2)) // -> 4
+console.log(square(2)) // 4
 
-// self invoking functions
-(function(n) {
-  console.log(n * n)
-})(2)
-let squaredNum = (function(n) {
+const squar = n => {
   return n * n
-})(10)
+}
 
-console.log(squaredNum)
+console.log(squar(2))  // -> 4
+
+// if we have only one line in the code block, it can be written as follows, explicit return
+const sqr = n => n * n  // -> 4
