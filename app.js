@@ -18,3 +18,14 @@ console.log(squar(2))  // -> 4
 
 // if we have only one line in the code block, it can be written as follows, explicit return
 const sqr = n => n * n  // -> 4
+
+//change country names to upper case with arrow function
+const changeUpperCase = arr => {
+  const newArr = []
+  for (const element of arr){
+    newArr.push(element.toUpperCase())
+  }
+  return newArr
+}
+const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+console.log(changeUpperCase(countries));
