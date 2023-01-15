@@ -1,5 +1,5 @@
 //day 8
-//getting value from a object
+//setting new key from an object
 const person = {
   firstName: 'Asabeneh',
   lastName: 'Yetayeh',
@@ -17,23 +17,26 @@ const person = {
     'D3.js'
   ],
   getFullName: function() {
-    return `${this.firstName}${this.lastName}`
-  },
-  'phone number': '+3584545454545'
+    return `${this.firstName} ${this.lastName}`
+  }
 }
+person.nationality = 'Ethiopian'
+person.country = 'Finland'
+person.title = 'teacher'
+person.skills.push('Meteor')
+person.skills.push('SasS')
+person.isMarried = true
 
-// accessing values using .
-console.log(person.firstName)
-console.log(person.lastName)
-console.log(person.age)
-console.log(person.location) // undefined
+person.getPersonInfo = function() {
+  let skillsWithoutLastSkill = this.skills
+    .splice(0, this.skills.length - 1)
+    .join(', ')
+  let lastSkill = this.skills.splice(this.skills.length - 1)[0]
 
-// value can be accessed using square bracket and key name
-console.log(person['firstName'])
-console.log(person['lastName'])
-console.log(person['age'])
-console.log(person['age'])
-console.log(person['location']) // undefined
-
-// for instance to access the phone number we only use the square bracket method
-console.log(person['phone number'])
+  let skills = `${skillsWithoutLastSkill}, and ${lastSkill}`
+  let fullName = this.getFullName()
+  let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`
+  return statement
+}
+console.log(person)
+console.log(person.getPersonInfo())
