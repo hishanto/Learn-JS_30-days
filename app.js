@@ -22,3 +22,8 @@ const person = {
 
 const copyPerson = Object.assign({}, person)
 console.log(copyPerson)
+// Object.keys: To get the keys or properties of an object as an array
+const keys = Object.keys(copyPerson)
+console.log(keys) //['firstName', 'age', 'country','city', 'skills','title', 'address', 'getPersonInfo']
+const address = Object.keys(copyPerson.address)
+console.log(address) //['street', 'pobox', 'city']
