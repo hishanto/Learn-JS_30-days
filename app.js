@@ -1,31 +1,28 @@
-//day 7
-//Functions
-// Arrow function is an alternative to write a function, however function declaration and arrow function have some minor differences.
-// Arrow function uses arrow instead of the keyword function to declare a function. Let us see both function declaration and arrow function.
-// This is how we write normal or declaration function
-// Let us change this declaration function to an arrow function
-function square(n) {
-  return n * n
+//day 8
+//creating objects
+const rectangle = {
+  length: 20,
+  width: 20,
+  
 }
+console.log(rectangle) // {length: 20, width: 20}
 
-console.log(square(2)) // 4
-
-const squar = n => {
-  return n * n
+const person = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
+  age: 250,
+  country: 'Finland',
+  city: 'Helsinki',
+  skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js'
+  ],
+  isMarried: true
 }
-
-console.log(squar(2))  // -> 4
-
-// if we have only one line in the code block, it can be written as follows, explicit return
-const sqr = n => n * n  // -> 4
-
-//change country names to upper case with arrow function
-const changeUpperCase = arr => {
-  const newArr = []
-  for (const element of arr){
-    newArr.push(element.toUpperCase())
-  }
-  return newArr
-}
-const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
-console.log(changeUpperCase(countries));
+console.log(person)
