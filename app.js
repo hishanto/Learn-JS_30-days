@@ -33,3 +33,7 @@ console.log(values)
 // Object.entries:To get the keys and values in an arrayObject.entries:To get the keys and values in an array
 const entries = Object.entries(copyPerson)
 console.log(entries)
+
+// hasOwnProperty: To check if a specific key or property exist in an object
+console.log(copyPerson.hasOwnProperty('name'))
+console.log(copyPerson.hasOwnProperty('score'))
